@@ -67,13 +67,11 @@ li {
   align-items: center;
 }
 
-.hero .container{
+.hero {
   padding: 200px 0;
   margin: 0 auto;
   width: 1600px;
   height: 600px;
-
-  text-align: center;
 
   background-image: linear-gradient(to right, var(--background-gradient-color),
   var(--background-gradient-color)), url('../images/background-img.jpg');
@@ -120,8 +118,6 @@ li {
 
 /* ========= SVG and IMG styles =========*/
 .link-icon {
-  height: 100%;
-  vertical-align: middle;
   margin-right: 10px;
 
   fill: currentColor;
@@ -152,7 +148,6 @@ li {
   padding: 0;
   height: 100%;
   vertical-align: middle;
-
 }
 
 .social-link-icon {
@@ -163,13 +158,6 @@ li {
 
 /* ========= REFERENCES ==========*/
 .link {
-  display: inline;
-}
-
-.link,
-.examples-list .link,
-.examples-list .link:hover,
-.examples-list .link:focus {
   color: var(--main-color);
 }
 
@@ -181,6 +169,11 @@ li {
 .contact-list-item .link,
 .navbar-list-item .link {
   padding: 32px 0;
+}
+
+.contact-list-item .link {
+  display: flex;
+  align-items: center;
 }
 
 .join-box .social-link {
@@ -207,9 +200,11 @@ li {
 }
 
 .social-link {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 12px;
   display: flex;
+  align-items: center;
   justify-content: center;
 
   border-radius: 50%;
@@ -221,6 +216,12 @@ li {
   fill: var(--active-color);
   background-color: var(--accent-color);
 }
+
+.address .logo,
+.address .link{
+  display: inline-block;
+}
+
 /* ========= END REFERENCES ==========*/
 
 /* ========= COMPONENTS =========== */
@@ -359,7 +360,8 @@ li {
 }
 
 .social-list-item {
-  width: calc((100% - 3 * 10px) / 4 );
+  width: 44px;
+  height: 44px;
   margin: 0 10px 0 0;
   padding: 0;
 }
@@ -444,11 +446,11 @@ li {
 
 .address-list,
 .footer .logo {
-  display: inline;
   padding: 0;
 }
 
 .footer .logo {
+  display: inline-block;
   margin: 0 0 20px;
 }
 
@@ -466,14 +468,12 @@ li {
 }
 
 .allcontacts {
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
+  margin-right: 70px;
 }
 
 .join-text {
   display: inline-block;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 
   font-weight: 700;
   font-size: inherit;
@@ -513,6 +513,7 @@ li {
   border-radius: 4px;
 
   cursor: pointer;
+  outline: none;
 }
 
 .button:hover,
@@ -553,9 +554,12 @@ li {
   margin-bottom: 30px;
 }
 
-.examples-list-item:hover,
-.examples-list-item:focus {
-  box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
+.examples-list-item > .link:hover,
+.examples-list-item > .link:focus {
+  color: var(--main-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+              0px 4px 4px rgba(0, 0, 0, 0.06), 
+              1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .examples-section .button {
