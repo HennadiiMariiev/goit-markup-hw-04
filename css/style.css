@@ -58,6 +58,7 @@ li {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  word-wrap: break-word;
 }
 
 .navbar,
@@ -75,7 +76,7 @@ li {
   text-align: center;
 
   background-image: linear-gradient(to right, var(--background-gradient-color),
-  var(--background-gradient-color)), url('/images/background-img.jpg');
+  var(--background-gradient-color)), url('../images/background-img.jpg');
 }
 
 .clients,
@@ -343,6 +344,15 @@ li {
   padding: 0;
 }
 
+.small-header,
+.section-text,
+.team-list-header,
+.team-list-text,
+.example-header,
+.example-text {
+  word-wrap: inherit;
+}
+
 .social-list {
   padding: 0;
   margin: 0;
@@ -381,6 +391,7 @@ li {
   font-weight: 700;
   font-size: inherit;
   text-transform: uppercase;
+  word-wrap: inherit;
 }
 
 .work-section-header,
@@ -408,6 +419,7 @@ li {
 
   font-weight: 500;
   font-size: 16px;
+  word-wrap: inherit;
 }
 
 .section-text {
@@ -416,6 +428,8 @@ li {
   font-weight: 400;
   font-size: inherit;
   line-height: 1.7;
+  word-wrap: inherit;
+
   color: var(--inactive-color);
 }
 
